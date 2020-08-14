@@ -1,0 +1,16 @@
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    - CustomLeftAndMain
+  help_links:
+    # Edit an existing link
+    'CMS User help': 'https://example.com'
+    # Add a new link
+    'Additional link': 'https://example.org'
+    # Remove an existing link
+    'Feedback': ''
+
+SilverStripe\ORM\DataObject:
+  extensions:
+    - DataObjectExtension
+#  database_extensions:
+#    -
