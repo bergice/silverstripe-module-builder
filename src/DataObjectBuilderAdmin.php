@@ -3,9 +3,9 @@
 use SilverStripe\Admin\ModelAdmin;
 use SilverStripe\Core\ClassInfo;
 
-class ModelBuilderAdmin extends ModelAdmin
+class DataObjectBuilderAdmin extends ModelAdmin
 {
-    private static $url_segment = 'modeleditoradmin';
+    private static $url_segment = 'dataobjects';
 
     private static $managed_models = [
         DataObjectClass::class,
