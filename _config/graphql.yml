@@ -1,0 +1,23 @@
+#---
+#Name: graphql
+#After:
+#  - graphqlconfig
+#  - admin-injector
+#  - framework/_config/routes#coreroutes
+#---
+#SilverStripe\Control\Director:
+#  rules:
+#    'graphql': '%$SilverStripe\GraphQL\Controller.default'
+#
+#SilverStripe\GraphQL\Manager:
+#  schemas:
+#    default:
+#
+#      queries:
+#        readClassManifests: 'ClassManifestQueryCreator'
+#
+#      types:
+#        classManifest: 'ClassManifestTypeCreator'
+#
+##      mutations:
+##        createMemberMutation: 'CreateMemberMutationCreator'

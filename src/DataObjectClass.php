@@ -83,6 +83,7 @@ class DataObjectClass extends DataObject implements Flushable
 
     public static function flush()
     {
+        // todo: don't do this until the `DataObjectClass` table exists
         static::updateMissingRecords();
     }
 
