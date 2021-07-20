@@ -14,10 +14,11 @@ use SilverStripe\ORM\DataObject;
  */
 class DataObjectField extends DataObject
 {
-//    private static $singular_name = 'Field';
-//    private static $plural_name = 'Fields';
+    private static $singular_name = 'Field';
 
-    private static $hide_ancestor = true;
+    private static $plural_name = 'Fields';
+
+    private static $hide_ancestor = 'DataObjectField';
 
     private static $db = [
         'Name' => 'Varchar(255)',

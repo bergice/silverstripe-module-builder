@@ -10,4 +10,8 @@ use SilverStripe\ORM\DataObject;
 
 class DataObjectString extends DataObjectField
 {
+    private static $singular_name = 'String';
+
+    private static $plural_name = 'Strings';
+
 }

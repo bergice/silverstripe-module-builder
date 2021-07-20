@@ -1,7 +1,6 @@
 <?php
 
 use SilverStripe\Admin\ModelAdmin;
-use SilverStripe\Core\ClassInfo;
 
 class DataObjectBuilderAdmin extends ModelAdmin
 {
@@ -15,23 +14,10 @@ class DataObjectBuilderAdmin extends ModelAdmin
 //        Contact::class => CsvBulkLoader::class,
 //    ];
 
-    private static function updateDataObjectList()
-    {
-        $dataObjectClasses = DataObjectClass::getAll();
-
-        // write classes
-        /** @var DataObjectClass $dataObjectClass */
-        foreach ($dataObjectClasses as $dataObjectClass) {
-            $dataObjectClass->write();
-        }
-
-        // todo: delete removed classes
-        // ...
-    }
-
     public function getList()
     {
-        static::updateDataObjectList();
+        // todo: maybe move this into dev/build?flush and/or add a button called "Sync"
+//        DataObjectClassSyncer::updateDataObjectClassesFromDataObjects();
         return parent::getList();
     }
 }

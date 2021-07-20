@@ -86,7 +86,7 @@ class ModelBuilder extends LeftAndMain
 //        $list->setDataClass(Page::class);
 //        $list->setDataClass(DataObject::class);
 //        $list = static::getDataTypes();
-        $list = DataObjectClass::getAll();
+        $list = DataObjectClass::getAndCreateMissing();
 
         $gridField = new GridField('ExampleGrid', 'Example grid', $list);
 //        $gridField->setModelClass(DataObjectClass::class);
@@ -114,6 +114,6 @@ class ModelBuilder extends LeftAndMain
 //        $cmsClasses = CMSMenu::get_cms_classes();
 
 //        return new ArrayList($allClasses);
-        return DataObjectClass::getAll();
+        return DataObjectClass::getAndCreateMissing();
     }
 }
